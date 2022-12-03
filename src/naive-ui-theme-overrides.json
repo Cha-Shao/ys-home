@@ -1,0 +1,14 @@
+{
+  "Tabs": {
+    "tabTextColorActiveLine": "#FF8729FF",
+    "tabTextColorHoverLine": "#FF8729FF",
+    "tabTextColorActiveBar": "#FF8729FF",
+    "tabTextColorHoverBar": "#FF8729FF",
+    "barColor": "#FF8729FF",
+    "tabTextColorActiveCard": "#FF8729FF",
+    "fontWeightStrong": ".",
+    "tabFontWeight": "600",
+    "tabFontWeightActive": "600",
+    "tabPaddingLargeLine": "4px 0"
+  }
+}
