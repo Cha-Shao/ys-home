@@ -12,10 +12,12 @@ const props = defineProps<{
 <template>
   <div pa-6 bg-bg b-rd-4>
     <div flex mb-2>
-      <n-avatar round :size="48" :src="props.avatar" mr-2 />
-      <div>
-        <h1 text-lg>{{ props.name }}</h1>
-        <p op-50>{{ props.brief }}</p>
+      <n-avatar round :size="60" :src="props.avatar" mr-4 />
+      <div flex items-center>
+        <div>
+          <h1 text-lg>{{ props.name }}</h1>
+          <p color-coolgray>{{ props.brief }}</p>
+        </div>
       </div>
     </div>
     <p w-full break-all>{{ props.content }}</p>

@@ -3,6 +3,7 @@ import { NConfigProvider } from 'naive-ui';
 import NewsPage from './components/News/index.vue'
 import VideosPage from './components/Videos/index.vue'
 import MembersPage from './components/Members/index.vue'
+import Footer from './components/Footer/index.vue'
 
 import customTheme from './naive-ui-theme-overrides.json'
 </script>
@@ -20,5 +21,6 @@ import customTheme from './naive-ui-theme-overrides.json'
         <MembersPage />
       </div>
     </div>
+    <Footer />
   </n-config-provider>
 </template>

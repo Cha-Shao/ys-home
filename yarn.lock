@@ -53,7 +53,14 @@
   resolved "https://registry.npmmirror.com/@esbuild/linux-loong64/-/linux-loong64-0.15.16.tgz#284522de76abe951e4ed2bd24a467e8d49c67933"
   integrity sha512-SDLfP1uoB0HZ14CdVYgagllgrG7Mdxhkt4jDJOKl/MldKrkQ6vDJMZKl2+5XsEY/Lzz37fjgLQoJBGuAw/x8kQ==
 
-"@iconify/types@^2.0.0":
+"@iconify-json/ri@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.npmmirror.com/@iconify-json/ri/-/ri-1.1.4.tgz#52aff40f161064f60dd08f3e3add6d9fdc5e03a4"
+  integrity sha512-gAk2gQBVghgbMLOmbUCc3l4COMMH5sR3HhBqpjaPUFBbC4WsNNRyOD4RZgjlanU7DTgFrj4NarY5K2EkXaVxuw==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.npmmirror.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
   integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==

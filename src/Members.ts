@@ -30,6 +30,6 @@ export default [
     name: '白石',
     brief: '文案',
     content: '旁友，约稿子伐？三块一斤，十块钱三斤',
-    avatar: '/avatars/zao.jpg'
+    avatar: '/avatars/baishi.jpg'
   }],
 ]

@@ -16,7 +16,7 @@ const props = defineProps<{
       ]">
       <div px-4 py-2 box-border h-24>
         <h1 h-lt>{{ props.title }}</h1>
-        <p op-75 line-clamp-2>{{ props.brief }}</p>
+        <p color-coolgray-500 line-clamp-2 whitespace-pre-wrap>{{ props.brief }}</p>
       </div>
     </div>
   </a>
