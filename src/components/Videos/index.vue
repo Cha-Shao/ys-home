@@ -28,7 +28,7 @@ import videosData from '../../Videos'
       :link="videosData.main.link"
     />
     <div shadow-md bg-bg b-rd-4 flex justify-between items-center>
-      <BigTitle main="作品" sub="展示" />
+      <BigTitle main="动画" sub="作品" />
     </div>
     <VideoCard
       :title="videosData.rightBottom.title"

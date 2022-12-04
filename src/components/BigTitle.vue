@@ -6,12 +6,13 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div relative w-fit mx-auto z-2>
+  <div relative w-fit mx-auto z-0>
     <div>
       <span h-lg>{{ props.main }}</span><span h-lg color-logo>{{ props.sub }}</span>
     </div>
-    <div absolute left="-25%" top="-180%" z--1>
-      <img src="../assets/title-before.svg" h-70 w-95>
+    <div absolute z--1 w-full top="-20%" blur-50 op-75>
+      <p absolute text-7xl font-700 color-logo left="10%" top="-15px">映</p>
+      <p absolute text-7xl font-700 color-red-500 right="10%" top="15px">素</p>
     </div>
   </div>
 </template>

@@ -21,3 +21,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+#app{
+  background-image: url('/background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}

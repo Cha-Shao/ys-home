@@ -1,9 +1,9 @@
 export default {
   carousel: [{
-    img: 'https://ys-home.oss-cn-guangzhou.aliyuncs.com/news/carousel/carousel_01.jpg',
+    img: '/news/carousel_01.jpg',
     link: 'https://store.elfmc.com/news/mod'
   }, {
-    img: 'https://ys-home.oss-cn-guangzhou.aliyuncs.com/news/carousel/carousel_02.jpg',
+    img: '/news/carousel_02.jpg',
     link: 'https://store.elfmc.com/news/miyu'
   }],
   news: [{
