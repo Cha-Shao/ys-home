@@ -20,7 +20,7 @@ const props = defineProps<{
           </div>
         </div>
       </div>
-      <p w-full break-all>{{ props.content }}</p>
+      <p w-full break-all whitespace-pre-wrap>{{ props.content }}</p>
       <div i-ri:external-link-line absolute right-3 top-3 color-coolgray />
     </div>
   </a>
@@ -34,6 +34,6 @@ const props = defineProps<{
           </div>
         </div>
       </div>
-      <p w-full break-all>{{ props.content }}</p>
+      <p w-full break-all whitespace-pre-wrap>{{ props.content }}</p>
     </div>
 </template>

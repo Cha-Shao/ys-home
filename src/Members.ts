@@ -42,6 +42,12 @@ export default [
     content: '摸鱼，盖屑建筑，摸鱼，盖火柴盒，摸鱼，被抓住摸鱼，摸鱼',
     avatar: '/avatars/baozi.jpg',
     link: ''
+  }, {
+    name: '小格',
+    brief: '编曲',
+    content: '扣1送水栽竹',
+    avatar: '/avatars/xiaoge.jpg',
+    link: ''
   }],
   [{
     name: '早',
@@ -61,5 +67,12 @@ export default [
     content: '虽然不知道说什么，但还是说点啥吧。',
     avatar: '/avatars/nona.jpg',
     link: 'https://space.bilibili.com/19254145'
+  }, {
+    name: '东方乐凌',
+    brief: '天桥卖艺担当',
+    content: `创作方向:主攻管弦乐、电子音乐、室内乐等，民乐电音车万风也能碰
+祝您身体健康，福如东海，寿比南山`,
+    avatar: '/avatars/dongfangyueling.jpg',
+    link: ''
   }],
 ]
