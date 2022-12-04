@@ -15,19 +15,19 @@ import customTheme from './naive-ui-theme-overrides.json'
   <n-config-provider :theme-overrides="customTheme">
     <Header />
     <div class="root" max-w-1440px mx-auto px-16>
-      <div min-h-80vh mt-12vh>
+      <div my-15vh>
         <NewsPage />
       </div>
       <div mb-12vh>
         <BannerPage />
       </div>
-      <div min-h-80vh mt-12vh>
+      <div my-15vh>
         <VideosPage />
       </div>
-      <div min-h-80vh mt-12vh>
+      <div my-15vh>
         <ToysPage />
       </div>
-      <div min-h-80vh mt-12vh>
+      <div my-15vh>
         <MembersPage />
       </div>
     </div>

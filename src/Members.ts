@@ -17,6 +17,12 @@ export default [
     content: '你是菇，比我更菇',
     avatar: '/avatars/mogu.jpg',
     link: 'https://space.bilibili.com/5706445'
+  }, {
+    name: '酒石酸菌',
+    brief: '并非在大雪之中没有通往前庭的门，而是没有门，没有前庭，更没有一条路通往文明的世界！',
+    content: 'Minecraft 模组教程作者、模组开发者、已弃坑模组翻译者。爱好自然科学、历史和计算机。',
+    avatar: '/avatars/943.jpg',
+    link: ''
   }],
   [{
     name: '咖啡鱼',

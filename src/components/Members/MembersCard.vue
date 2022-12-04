@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { NAvatar } from 'naive-ui';
-
 const props = defineProps<{
   name: string
   brief: string
@@ -14,7 +12,7 @@ const props = defineProps<{
   <a v-if="props.link" :href="props.link" target="_blank" block>
     <div pa-6 bg-bg b-rd-4 relative>
       <div flex mb-2>
-        <n-avatar round :size="60" :src="props.avatar" mr-4 />
+        <img :src="props.avatar" alt="Avatar" mr-4 b-rd-99 w-15 h-15 block>
         <div flex items-center>
           <div>
             <h1 text-lg>{{ props.name }}</h1>
@@ -28,7 +26,7 @@ const props = defineProps<{
   </a>
   <div v-else pa-6 bg-bg b-rd-4 relative>
       <div flex mb-2>
-        <n-avatar round :size="60" :src="props.avatar" mr-4 />
+        <img :src="props.avatar" alt="Avatar" mr-4 b-rd-99 w-15 h-15 block>
         <div flex items-center>
           <div>
             <h1 text-lg>{{ props.name }}</h1>
