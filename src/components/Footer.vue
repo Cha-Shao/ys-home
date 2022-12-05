@@ -11,7 +11,7 @@ const links = [{
 </script>
 
 <template>
-  <div pa-4 b-t-1 b-t-logo bg-lbg dark:bg-dbg>
+  <div pa-4 b-t-1 b-t-logo bg-bg>
     <div px-4 py-2 justify-between>
       <div flex flex-col items-start>
         <img src="/favicon.svg" alt="Logo" h-16>
@@ -19,7 +19,7 @@ const links = [{
           我是一个一个一个脚注啊啊啊
         </p>
         <div flex gap-2>
-          <a v-for="(data, i) in links" :key="i" :href="data.to" :title="data.title" icon-btn pa-1 bg-lpbg dark:bg-dpbg
+          <a v-for="(data, i) in links" :key="i" :href="data.to" :title="data.title" icon-btn pa-1 bg-pbg
             b-rd-99>
             <div :class="data.icon" />
           </a>
