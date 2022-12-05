@@ -1,4 +1,4 @@
 export default [{
-  cover: '/banners/yuanshi.jpg',
+  cover: '/banners/ark.jpg',
   link: '#'
 }]
