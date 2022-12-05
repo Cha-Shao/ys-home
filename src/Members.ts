@@ -22,7 +22,13 @@ export default [
     brief: '并非在大雪之中没有通往前庭的门，而是没有门，没有前庭，更没有一条路通往文明的世界！',
     content: 'Minecraft 模组教程作者、模组开发者、已弃坑模组翻译者。爱好自然科学、历史和计算机。',
     avatar: '/avatars/943.jpg',
-    link: ''
+    link: 'https://space.bilibili.com/4435845'
+  }, {
+    name: '火锅料理',
+    brief: '地形师',
+    content: `负责技术流程研究和场景搭建`,
+    avatar: '/avatars/huoguoliaoli.jpg',
+    link: 'https://space.bilibili.com/13073402'
   }],
   [{
     name: '咖啡鱼',
@@ -48,6 +54,12 @@ export default [
     content: '扣1送水栽竹',
     avatar: '/avatars/xiaoge.jpg',
     link: ''
+  }, {
+    name: '暗娅',
+    brief: '这里有六边形战士，等级一',
+    content: '这是什么，鱼，摸一下。这是什么，鱼，摸一下。这是什么，鱼，摸一下。',
+    avatar: '/avatars/anya.jpg',
+    link: 'https://space.bilibili.com/5718046'
   }],
   [{
     name: '早',

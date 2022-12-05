@@ -270,7 +270,7 @@
     "@unocss/preset-mini" "0.47.5"
     "@unocss/preset-wind" "0.47.5"
 
-"@unocss/preset-web-fonts@0.47.5":
+"@unocss/preset-web-fonts@0.47.5", "@unocss/preset-web-fonts@^0.47.5":
   version "0.47.5"
   resolved "https://registry.npmmirror.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.47.5.tgz#7cfb2bc846935b9af571306a0913a06dcfb1bba1"
   integrity sha512-7m8KZerLez1bzGcuPYo+O/qjcKs86Dpin6Lm/k+HmDDPoQygZ9FlHN8+5curAhNLxkWF94SpkpiCuiC9VfzkEA==

@@ -15,6 +15,7 @@
   "devDependencies": {
     "@iconify-json/ri": "^1.1.4",
     "@unocss/preset-attributify": "^0.47.5",
+    "@unocss/preset-web-fonts": "^0.47.5",
     "@unocss/vite": "^0.47.5",
     "@vitejs/plugin-vue": "^3.2.0",
     "naive-ui": "^2.34.2",

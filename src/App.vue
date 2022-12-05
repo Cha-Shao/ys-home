@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { NConfigProvider } from 'naive-ui';
+import TopPage from './components/Top/index.vue'
+import RoutesPage from './components/Routes/index.vue'
 import NewsPage from './components/News/index.vue'
 import BannerPage from './components/Banner.vue'
 import VideosPage from './components/Videos/index.vue'
@@ -13,8 +15,12 @@ import customTheme from './naive-ui-theme-overrides.json'
 
 <template>
   <n-config-provider :theme-overrides="customTheme">
-    <Header />
+    <Header h-16 />
     <div class="root" max-w-1440px mx-auto px-16>
+      <TopPage h-84vh />
+      <div my-15vh>
+        <RoutesPage />
+      </div>
       <div my-15vh>
         <NewsPage />
       </div>

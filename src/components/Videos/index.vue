@@ -6,20 +6,23 @@ import videosData from '../../Videos'
 </script>
 
 <template>
-  <div w-full grid grid-cols-3 grid-rows-2 gap-4>
+  <div w-full grid grid-cols-10 grid-rows-2 gap-4>
     <VideoCard
+    grid-col-span-3
       :title="videosData.leftTop.title"
       :brief="videosData.leftTop.brief"
       :cover="videosData.leftTop.cover"
       :link="videosData.leftTop.link"
     />
     <VideoCard
+    grid-col-span-3
       :title="videosData.rightTop.title"
       :brief="videosData.rightTop.brief"
       :cover="videosData.rightTop.cover"
       :link="videosData.rightTop.link"
     />
     <VideoCard
+      grid-col-span-4
       main
       grid-row-span-2
       :title="videosData.main.title"
@@ -27,10 +30,11 @@ import videosData from '../../Videos'
       :cover="videosData.main.cover"
       :link="videosData.main.link"
     />
-    <div shadow-md bg-bg b-rd-4 flex justify-between items-center>
+    <div shadow-md bg-bg b-rd-4 flex justify-between items-center grid-col-span-3>
       <BigTitle main="动画" sub="作品" />
     </div>
     <VideoCard
+      grid-col-span-3
       :title="videosData.rightBottom.title"
       :brief="videosData.rightBottom.brief"
       :cover="videosData.rightBottom.cover"
