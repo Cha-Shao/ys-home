@@ -25,41 +25,49 @@ const iconAnimation = (to: number, key: string) => {
 
 <template>
   <div grid grid-cols-10 grid-rows-10 gap-4 h-160>
-    <div cursor-pointer b-rd-4 bg-bg shadow-md grid-col-span-3 grid-row-span-6 flex flex-col justify-center items-center
-      @mouseenter="iconAnimation(-1, 'model')" @mouseleave="iconAnimation(1, 'model')">
-      <div class="icon" :style="{
-        backgroundImage: `url(${modelIcon})`,
-        backgroundPositionY: `${iconFrames['model']}px`
-      }" />
-      <h3 mt-4 h-sm>浏览模型</h3>
-    </div>
+    <a href="#" target="_blank" grid-col-span-3 grid-row-span-6>
+      <div h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
+        @mouseenter="iconAnimation(-1, 'model')" @mouseleave="iconAnimation(1, 'model')">
+        <div class="icon" :style="{
+          backgroundImage: `url(${modelIcon})`,
+          backgroundPositionY: `${iconFrames['model']}px`
+        }" />
+        <h3 mt-4 h-sm>浏览模型</h3>
+      </div>
+    </a>
     <div b-rd-4 bg-bg shadow-md grid-col-span-4 grid-row-span-10 flex flex-col justify-center items-center>
       <BigTitle main="映素" sub="作坊" />
     </div>
-    <div cursor-pointer b-rd-4 bg-bg shadow-md grid-col-span-3 grid-row-span-4 flex flex-col justify-center items-center
-      @mouseenter="iconAnimation(-1, 'texture')" @mouseleave="iconAnimation(1, 'texture')">
-      <div class="icon" :style="{
-        backgroundImage: `url(${textureIcon})`,
-        backgroundPositionY: `${iconFrames['texture']}px`
-      }" />
-      <h3 mt-4 h-sm>浏览纹理</h3>
-    </div>
-    <div cursor-pointer b-rd-4 bg-bg shadow-md grid-col-span-3 grid-row-span-6 flex flex-col justify-center items-center
-      @mouseenter="iconAnimation(-1, 'map')" @mouseleave="iconAnimation(1, 'map')">
-      <div class="icon" :style="{
-        backgroundImage: `url(${mapIcon})`,
-        backgroundPositionY: `${iconFrames['map']}px`
-      }" />
-      <h3 mt-4 h-sm>浏览地图</h3>
-    </div>
-    <div cursor-pointer b-rd-4 bg-bg shadow-md grid-col-span-3 grid-row-span-4 flex flex-col justify-center items-center
-      @mouseenter="iconAnimation(-1, 'toilet')" @mouseleave="iconAnimation(1, 'toilet')">
-      <div class="icon" :style="{
-        backgroundImage: `url(${toiletIcon})`,
-        backgroundPositionY: `${iconFrames['toilet']}px`
-      }" />
-      <h3 mt-4 h-sm>前往厕所</h3>
-    </div>
+    <a href="#" target="_blank" grid-col-span-3 grid-row-span-4>
+      <div h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
+        @mouseenter="iconAnimation(-1, 'texture')" @mouseleave="iconAnimation(1, 'texture')">
+        <div class="icon" :style="{
+          backgroundImage: `url(${textureIcon})`,
+          backgroundPositionY: `${iconFrames['texture']}px`
+        }" />
+        <h3 mt-4 h-sm>浏览纹理</h3>
+      </div>
+    </a>
+    <a href="#" target="_blank" grid-col-span-3 grid-row-span-6>
+      <div h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
+        @mouseenter="iconAnimation(-1, 'map')" @mouseleave="iconAnimation(1, 'map')">
+        <div class="icon" :style="{
+          backgroundImage: `url(${mapIcon})`,
+          backgroundPositionY: `${iconFrames['map']}px`
+        }" />
+        <h3 mt-4 h-sm>浏览地图</h3>
+      </div>
+    </a>
+    <a href="#" target="_blank" grid-col-span-3 grid-row-span-4>
+      <div h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
+        @mouseenter="iconAnimation(-1, 'toilet')" @mouseleave="iconAnimation(1, 'toilet')">
+        <div class="icon" :style="{
+          backgroundImage: `url(${toiletIcon})`,
+          backgroundPositionY: `${iconFrames['toilet']}px`
+        }" />
+        <h3 mt-4 h-sm>前往厕所</h3>
+      </div>
+    </a>
   </div>
 </template>
 
