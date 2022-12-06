@@ -29,6 +29,18 @@ export default [
     content: `负责技术流程研究和场景搭建`,
     avatar: '/avatars/huoguoliaoli.jpg',
     link: 'https://space.bilibili.com/13073402'
+  }, {
+    name: '白X',
+    brief: `吃瓜`,
+    content: `这人没啥用，躺，摆，偶尔出来听个响。`,
+    avatar: '/avatars/baix.jpg',
+    link: ''
+  }, {
+    name: '天鈴',
+    brief: `摸抖儿`,
+    content: `人不好色好甚么？how are u 吗？`,
+    avatar: '/avatars/tianling.jpg',
+    link: 'https://space.bilibili.com/122954448'
   }],
   [{
     name: '咖啡鱼',
@@ -60,6 +72,18 @@ export default [
     content: '这是什么，鱼，摸一下。这是什么，鱼，摸一下。这是什么，鱼，摸一下。',
     avatar: '/avatars/anya.jpg',
     link: 'https://space.bilibili.com/5718046'
+  }, {
+    name: 'Normal_sd',
+    brief: `BB爱好者 上色什么的不会啦（绝望）`,
+    content: '常规3D制作人（咕咕中）稍微能做一些载具和枪械，对人物感兴趣，正在试图学习上色(绝赞混素中)',
+    avatar: '/avatars/normalsd.jpg',
+    link: 'https://space.bilibili.com/2057712'
+  }, {
+    name: 'GhastRiv',
+    brief: `项目合作商`,
+    content: '职业Live2D动画师，映素编外项目合作人员',
+    avatar: '/avatars/ghastriv.jpg',
+    link: 'https://www.pixiv.net/users/3961302'
   }],
   [{
     name: '早',
@@ -92,5 +116,11 @@ export default [
     content: `好色哦`,
     avatar: '/avatars/xiaohei.jpg',
     link: ''
+  }, {
+    name: '依墨',
+    brief: `动画兴趣生`,
+    content: `渲染 动画`,
+    avatar: '/avatars/yimo.jpg',
+    link: 'https://space.bilibili.com/89814502'
   }],
 ]
