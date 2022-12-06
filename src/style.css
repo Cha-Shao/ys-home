@@ -32,7 +32,3 @@ a {
   background-position: top center;
   background-repeat: no-repeat;
 }
-
-.fade-enter-from, .fade-leave-to{ opacity: 0; }
-.fade-enter-to, .fade-leave-from{ opacity: 100; }
-.fade-enter-active, .fade-leave-active { transition: 0.2s ease; }

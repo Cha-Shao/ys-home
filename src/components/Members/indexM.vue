@@ -18,17 +18,15 @@ const showMember = ref(0)
       <img v-for="(data, i) in membersDataM" :key="i" :src="data.avatar" alt="Avatar" mr-4 b-rd-99 w-15 h-15 block shrink-0 @click="showMember = i">
     </div>
     <div v-for="(data, i) in membersDataM" :key="i">
-      <Transition name="fade" mode="out-in">
-        <MembersCard
-          v-if="i === showMember"
-          mx-2
-          :name="data.name"
-          :brief="data.brief"
-          :content="data.content"
-          :avatar="data.avatar"
-          :link="data.link"
-        />
-      </Transition>
+      <MembersCard
+        v-if="i === showMember"
+        mx-2
+        :name="data.name"
+        :brief="data.brief"
+        :content="data.content"
+        :avatar="data.avatar"
+        :link="data.link"
+      />
     </div>
   </div>
 </template>
