@@ -12,12 +12,17 @@ let rows: number[] = []
 for (let i = 0; i < 3; i++) {
   rows[i] = defaultRowLength;
 }
+console.log(rows);
 switch (membersData.length % 3) {
   case 1:
-    rows[0] += 1
+    rows[1] += 1
+    break
   case 2:
     rows[0] += 1
     rows[1] += 1
+    break
+  case 3:
+    break
 }
 </script>
 
