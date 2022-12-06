@@ -13,6 +13,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html body{
+  margin: unset;
+}
+
 h1,h2,h3,h4,h5,p{
   font-size: 1rem;
   margin: unset;
@@ -24,6 +28,7 @@ a {
 
 #app{
   background-image: url('/background.png');
-  background-size: contain;
+  background-size: 2560px 120vh;
+  background-position: top center;
   background-repeat: no-repeat;
 }

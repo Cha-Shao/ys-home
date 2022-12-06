@@ -9,13 +9,16 @@ import toysData from '../../Toys'
   <div w-full grid grid-cols-10 grid-rows-2 gap-4>
     <ToysCard
       main
+      h-full
       grid-col-span-4
       grid-row-span-2
       :cover="toysData.main"
     />
     <ToysCard
       grid-col-span-3
+      h-full
       v-for="(data, i) in toysData.sub"
+      :key="i"
       :cover="data"
     />
     <div shadow-md bg-bg b-rd-4 grid-col-span-3 flex justify-between items-center>

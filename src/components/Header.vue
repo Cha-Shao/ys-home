@@ -22,7 +22,7 @@ const links = [
       <p font-500>映素作坊</p>
     </div>
     <div flex>
-      <a v-for="(data, i) in links" :href="data.link" target="_blank" hover:color-logo transition-200 font-500 px-4>{{ data.label }}</a>
+      <a v-for="(data, i) in links" :key="i" :href="data.link" target="_blank" hover:color-logo transition-200 font-500 px-4>{{ data.label }}</a>
     </div>
   </div>
 </template>

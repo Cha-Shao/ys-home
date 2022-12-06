@@ -278,7 +278,7 @@
     "@unocss/core" "0.47.5"
     ohmyfetch "^0.4.21"
 
-"@unocss/preset-wind@0.47.5":
+"@unocss/preset-wind@0.47.5", "@unocss/preset-wind@^0.47.5":
   version "0.47.5"
   resolved "https://registry.npmmirror.com/@unocss/preset-wind/-/preset-wind-0.47.5.tgz#f98f2af8ac3fcd1356b38cec177c8a575c278005"
   integrity sha512-4Iue6E7l50Dql1MVjcnrBYLI5iosEId93NSygX76AYHkLix85eU9us3sd8mlbzEm7mu7P8hidX6kjdf992GFPw==

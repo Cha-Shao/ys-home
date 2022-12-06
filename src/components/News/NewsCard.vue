@@ -4,12 +4,14 @@ const props = defineProps<{
   content: string,
   date: string,
   link: string
+  mobile?: boolean
 }>()
 </script>
 
 <template>
-  <a :href="props.link" target="_blank" py-6 px-4 b-rd-4 bg-pbg block mb-1 flex items-center>
-    <div mr-4 color-white>
+  <a :href="props.link" target="_blank" px-4 bg-pbg block mb-1 flex items-center
+    :class="[props.mobile ? 'h-12 b-rd-2' : 'py-6 b-rd-4']">
+    <div mr-4 color-white shrink-0>
       <div v-if="props.type === 'news'" bg-hex-45f5a9 px-2 py-1 b-rd-1>
         <p text-3>新闻</p>
       </div>
@@ -21,6 +23,6 @@ const props = defineProps<{
       </div>
     </div>
     <p flex-grow line-clamp-1>{{ props.content }}</p>
-    <p op-50>{{ date }}</p>
+    <p op-50 shrink-0>{{ date }}</p>
   </a>
 </template>

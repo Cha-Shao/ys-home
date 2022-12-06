@@ -2,7 +2,8 @@ import {
   defineConfig,
   presetIcons,
   presetUno,
-  presetAttributify
+  presetAttributify,
+  presetWind
 } from 'unocss'
 
 export default defineConfig({
@@ -19,6 +20,13 @@ export default defineConfig({
       warn: true
     }),
     presetAttributify(),
+    presetWind({
+      // sm: 640px
+      // md: 768px
+      // lg: 1024px
+      // xl: 1280px
+      // 2xl: 1536px
+    }),
   ],
   theme: {
     colors: {
