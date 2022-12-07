@@ -138,5 +138,10 @@ export default [{
   content: `遇事不决，睡大觉！！`,
   avatar: '/avatars/tangwen.jpg',
   link: 'https://space.bilibili.com/37153239',
+}, {
+  name: '端木',
+  brief: `低产动作人，高产摸鱼人`,
+  content: `头号洒家，精通动作，如有业务请与本人沟通后确定事项，愿老板们能找到合适的打工人`,
+  avatar: '/avatars/duanmu.jpg',
 },
 ]

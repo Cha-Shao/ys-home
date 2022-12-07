@@ -21,7 +21,6 @@ const videosDataM = [
         mobile
         w-60
         ma-2
-        grid-col-span-3
         :title="data.title"
         :brief="data.brief"
         :cover="data.cover"
