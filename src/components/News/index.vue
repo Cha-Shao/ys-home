@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import BigTitle from '../BigTitle.vue';
-import NewsCard from './NewsCard.vue';
-import YButton from '../YButton.vue'
-import { NCarousel, NTabs, NTabPane } from 'naive-ui'
+import { NCarousel, NTabPane, NTabs } from 'naive-ui'
 import lodash from 'lodash'
+import YButton from '../YButton.vue'
+import BigTitle from '../BigTitle.vue'
 
-import { timeAnalysis } from '../../utils/timeAnalysis';
+import { timeAnalysis } from '../../utils/timeAnalysis'
 
 // 公告处理
 import newsData from '../../News'
+import NewsCard from './NewsCard.vue'
 const news = newsData.news
 const latestNews = lodash.orderBy(news, 'time', 'desc').slice(0, 6)
-const newsNews = lodash.filter(news, { 'type': 'news' }).slice(0, 6)
-const activeNews = lodash.filter(news, { 'type': 'active' }).slice(0, 6)
-const announceNews = lodash.filter(news, { 'type': 'announce' }).slice(0, 6)
+const newsNews = lodash.filter(news, { type: 'news' }).slice(0, 6)
+const activeNews = lodash.filter(news, { type: 'active' }).slice(0, 6)
+const announceNews = lodash.filter(news, { type: 'announce' }).slice(0, 6)
 </script>
 
 <template>
@@ -21,37 +21,47 @@ const announceNews = lodash.filter(news, { 'type': 'announce' }).slice(0, 6)
     <BigTitle main="新闻" sub="动态" mb-12 />
     <div b-rd-4 shadow-md bg-bg flex h-600px overflow-hidden>
       <div w="1/2" shrink-0>
-        <n-carousel show-arrow draggable autoplay>
+        <NCarousel show-arrow draggable autoplay>
           <a v-for="(data, i) in newsData.carousel" :key="i" :href="data.link" target="_blank">
             <img :src="data.img" alt="Carousel Image" w-full h-full object-cover>
           </a>
           <template #dots="{ total, currentIndex, to }">
             <ul class="custom-dots">
-              <li v-for="index of total" :key="index" :class="{ ['is-active']: currentIndex === index - 1 }"
-                @click="to(index - 1)" />
+              <li
+                v-for="index of total" :key="index" :class="{ ['is-active']: currentIndex === index - 1 }"
+                @click="to(index - 1)"
+              />
             </ul>
           </template>
-        </n-carousel>
+        </NCarousel>
       </div>
       <div w="1/2" py-4 px-7>
-        <n-tabs type="line" animated size="large" mb-2>
-          <n-tab-pane name="latest" tab="最新">
-            <NewsCard v-for="(data, i) in latestNews" :key="i" :type="data.type" :content="data.contnet"
-              :date="timeAnalysis(data.time)" :link="data.link" />
-          </n-tab-pane>
-          <n-tab-pane name="news" tab="新闻">
-            <NewsCard v-for="(data, i) in newsNews" :key="i" :type="data.type" :content="data.contnet"
-              :date="timeAnalysis(data.time)" :link="data.link" />
-          </n-tab-pane>
-          <n-tab-pane name="active" tab="活动">
-            <NewsCard v-for="(data, i) in activeNews" :key="i" :type="data.type" :content="data.contnet"
-              :date="timeAnalysis(data.time)" :link="data.link" />
-          </n-tab-pane>
-          <n-tab-pane name="announce" tab="公告">
-            <NewsCard v-for="(data, i) in announceNews" :key="i" :type="data.type" :content="data.contnet"
-              :date="timeAnalysis(data.time)" :link="data.link" />
-          </n-tab-pane>
-        </n-tabs>
+        <NTabs type="line" animated size="large" mb-2>
+          <NTabPane name="latest" tab="最新">
+            <NewsCard
+              v-for="(data, i) in latestNews" :key="i" :type="data.type" :content="data.contnet"
+              :date="timeAnalysis(data.time)" :link="data.link"
+            />
+          </NTabPane>
+          <NTabPane name="news" tab="新闻">
+            <NewsCard
+              v-for="(data, i) in newsNews" :key="i" :type="data.type" :content="data.contnet"
+              :date="timeAnalysis(data.time)" :link="data.link"
+            />
+          </NTabPane>
+          <NTabPane name="active" tab="活动">
+            <NewsCard
+              v-for="(data, i) in activeNews" :key="i" :type="data.type" :content="data.contnet"
+              :date="timeAnalysis(data.time)" :link="data.link"
+            />
+          </NTabPane>
+          <NTabPane name="announce" tab="公告">
+            <NewsCard
+              v-for="(data, i) in announceNews" :key="i" :type="data.type" :content="data.contnet"
+              :date="timeAnalysis(data.time)" :link="data.link"
+            />
+          </NTabPane>
+        </NTabs>
         <a href="https://store.elfmc.com/news" target="_blank" float-right>
           <YButton primary>查看更多</YButton>
         </a>

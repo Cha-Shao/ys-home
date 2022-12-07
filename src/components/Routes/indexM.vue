@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BigTitle from '../BigTitle.vue';
+import BigTitle from '../BigTitle.vue'
 
 import modelIcon from '../../assets/icon/model.png'
 import textureIcon from '../../assets/icon/texture.png'
@@ -7,22 +7,22 @@ import toiletIcon from '../../assets/icon/toilet.png'
 import mapIcon from '../../assets/icon/map.png'
 
 const routes = [{
-  title: "浏览模型",
+  title: '浏览模型',
   icon: modelIcon,
-  link: '#'
+  link: '#',
 }, {
-  title: "浏览纹理",
+  title: '浏览纹理',
   icon: textureIcon,
-  link: '#'
+  link: '#',
 }, {
-  title: "浏览地图",
+  title: '浏览地图',
   icon: mapIcon,
-  link: '#'
+  link: '#',
 }, {
-  title: "前往厕所",
+  title: '前往厕所',
   icon: toiletIcon,
-  link: '#'
-},]
+  link: '#',
+}]
 </script>
 
 <template>

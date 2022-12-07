@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import type { Ref } from 'vue';
+import { ref } from 'vue'
+import type { Ref } from 'vue'
 
 const links = [
   {
     label: '商店',
-    link: 'https://store.elfmc.com/'
+    link: 'https://store.elfmc.com/',
   },
   {
     label: 'Bilibili',
-    link: 'https://space.bilibili.com/400235810?spm_id_from=333.337.0.0'
+    link: 'https://space.bilibili.com/400235810?spm_id_from=333.337.0.0',
   },
   {
     label: '联系我们',
-    link: 'https://store.elfmc.com/contact'
+    link: 'https://store.elfmc.com/contact',
   },
 ]
 

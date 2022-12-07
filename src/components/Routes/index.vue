@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import BigTitle from '../BigTitle.vue';
+import { ref } from 'vue'
+import BigTitle from '../BigTitle.vue'
 
 import modelIcon from '../../assets/icon/model_animation.png'
 import textureIcon from '../../assets/icon/texture_animation.png'
@@ -18,7 +18,7 @@ const iconAnimation = (to: number, key: string) => {
   for (let i = 0; i < 19; i++) {
     setTimeout(() => {
       iconFrames.value[key] += to * 96
-    }, i * 20);
+    }, i * 20)
   }
 }
 </script>
@@ -26,12 +26,16 @@ const iconAnimation = (to: number, key: string) => {
 <template>
   <div grid grid-cols-10 grid-rows-10 gap-4 h-160>
     <a href="#" target="_blank" grid-col-span-3 grid-row-span-6>
-      <div h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
-        @mouseenter="iconAnimation(-1, 'model')" @mouseleave="iconAnimation(1, 'model')">
-        <div class="icon" :style="{
-          backgroundImage: `url(${modelIcon})`,
-          backgroundPositionY: `${iconFrames['model']}px`
-        }" />
+      <div
+        h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
+        @mouseenter="iconAnimation(-1, 'model')" @mouseleave="iconAnimation(1, 'model')"
+      >
+        <div
+          class="icon" :style="{
+            backgroundImage: `url(${modelIcon})`,
+            backgroundPositionY: `${iconFrames.model}px`,
+          }"
+        />
         <h3 mt-4 h-sm>浏览模型</h3>
       </div>
     </a>
@@ -39,32 +43,44 @@ const iconAnimation = (to: number, key: string) => {
       <BigTitle main="映素" sub="作坊" />
     </div>
     <a href="#" target="_blank" grid-col-span-3 grid-row-span-4>
-      <div h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
-        @mouseenter="iconAnimation(-1, 'texture')" @mouseleave="iconAnimation(1, 'texture')">
-        <div class="icon" :style="{
-          backgroundImage: `url(${textureIcon})`,
-          backgroundPositionY: `${iconFrames['texture']}px`
-        }" />
+      <div
+        h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
+        @mouseenter="iconAnimation(-1, 'texture')" @mouseleave="iconAnimation(1, 'texture')"
+      >
+        <div
+          class="icon" :style="{
+            backgroundImage: `url(${textureIcon})`,
+            backgroundPositionY: `${iconFrames.texture}px`,
+          }"
+        />
         <h3 mt-4 h-sm>浏览纹理</h3>
       </div>
     </a>
     <a href="#" target="_blank" grid-col-span-3 grid-row-span-6>
-      <div h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
-        @mouseenter="iconAnimation(-1, 'map')" @mouseleave="iconAnimation(1, 'map')">
-        <div class="icon" :style="{
-          backgroundImage: `url(${mapIcon})`,
-          backgroundPositionY: `${iconFrames['map']}px`
-        }" />
+      <div
+        h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
+        @mouseenter="iconAnimation(-1, 'map')" @mouseleave="iconAnimation(1, 'map')"
+      >
+        <div
+          class="icon" :style="{
+            backgroundImage: `url(${mapIcon})`,
+            backgroundPositionY: `${iconFrames.map}px`,
+          }"
+        />
         <h3 mt-4 h-sm>浏览地图</h3>
       </div>
     </a>
     <a href="#" target="_blank" grid-col-span-3 grid-row-span-4>
-      <div h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
-        @mouseenter="iconAnimation(-1, 'toilet')" @mouseleave="iconAnimation(1, 'toilet')">
-        <div class="icon" :style="{
-          backgroundImage: `url(${toiletIcon})`,
-          backgroundPositionY: `${iconFrames['toilet']}px`
-        }" />
+      <div
+        h-full cursor-pointer b-rd-4 bg-bg shadow-md flex flex-col justify-center items-center
+        @mouseenter="iconAnimation(-1, 'toilet')" @mouseleave="iconAnimation(1, 'toilet')"
+      >
+        <div
+          class="icon" :style="{
+            backgroundImage: `url(${toiletIcon})`,
+            backgroundPositionY: `${iconFrames.toilet}px`,
+          }"
+        />
         <h3 mt-4 h-sm>前往厕所</h3>
       </div>
     </a>

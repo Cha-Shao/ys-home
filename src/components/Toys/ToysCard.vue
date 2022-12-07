@@ -7,8 +7,10 @@ const props = defineProps<{
 
 <template>
   <div shadow-md bg-bg b-rd-4 overflow-hidden>
-    <img :src="props.cover" alt="cover" h-full w-full block object-cover :class="[
-      props.main ? 'h-full' : 'aspect-ratio-5/4'
-    ]">
+    <img
+      :src="props.cover" alt="cover" h-full w-full block object-cover :class="[
+        props.main ? 'h-full' : 'aspect-ratio-5/4',
+      ]"
+    >
   </div>
 </template>

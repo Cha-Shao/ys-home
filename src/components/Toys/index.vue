@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import BigTitle from '../BigTitle.vue';
-import ToysCard from './ToysCard.vue';
-
+import BigTitle from '../BigTitle.vue'
 import toysData from '../../Toys'
+import ToysCard from './ToysCard.vue'
 </script>
 
 <template>
@@ -15,10 +14,10 @@ import toysData from '../../Toys'
       :cover="toysData.main"
     />
     <ToysCard
-      grid-col-span-3
-      h-full
       v-for="(data, i) in toysData.sub"
       :key="i"
+      grid-col-span-3
+      h-full
       :cover="data"
     />
     <div shadow-md bg-bg b-rd-4 grid-col-span-3 flex justify-between items-center>

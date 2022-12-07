@@ -7,7 +7,7 @@ const links = [{
   title: 'QQ',
   icon: 'i-ri:qq-line',
   to: '/',
-},]
+}]
 </script>
 
 <template>
@@ -19,8 +19,10 @@ const links = [{
           我是一个一个一个脚注啊啊啊
         </p>
         <div flex gap-2>
-          <a v-for="(data, i) in links" :key="i" :href="data.to" :title="data.title" icon-btn pa-1 bg-pbg
-            b-rd-99>
+          <a
+            v-for="(data, i) in links" :key="i" :href="data.to" :title="data.title" icon-btn pa-1 bg-pbg
+            b-rd-99
+          >
             <div :class="data.icon" />
           </a>
         </div>

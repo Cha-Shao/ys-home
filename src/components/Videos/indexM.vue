@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import BigTitle from '../BigTitle.vue';
-import VideoCard from './VideoCard.vue';
-
+import BigTitle from '../BigTitle.vue'
 import videosData from '../../Videos'
+import VideoCard from './VideoCard.vue'
 
 const videosDataM = [
   videosData.main,
   videosData.leftTop,
   videosData.rightTop,
-  videosData.rightBottom
+  videosData.rightBottom,
 ]
 </script>
 
@@ -16,7 +15,8 @@ const videosDataM = [
   <div>
     <BigTitle main="动画" sub="作品" mobile mb-6 />
     <div flex overflow-x-scroll pb-2>
-      <VideoCard v-for="(data, i) in videosDataM" :key="i"
+      <VideoCard
+        v-for="(data, i) in videosDataM" :key="i"
         shrink-0
         mobile
         w-60
