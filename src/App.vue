@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NConfigProvider } from 'naive-ui';
+import { NConfigProvider } from 'naive-ui'
 
 // PC
 import Header from './components/Header.vue'
@@ -20,15 +20,17 @@ import NewsPageM from './components/News/indexM.vue'
 import VideosPageM from './components/Videos/indexM.vue'
 import ToysPageM from './components/Toys/indexM.vue'
 import MembersPageM from './components/Members/indexM.vue'
+import MenuM from './components/MenuM.vue'
+import { menuStatus } from './utils/showMenu'
 
 import customTheme from './naive-ui-theme-overrides.json'
 
-import { isMobile } from './utils/isMobile';
+import { isMobile } from './utils/isMobile'
 </script>
 
 <template>
-  <n-config-provider :theme-overrides="customTheme">
-    <div v-if="isMobile == false">
+  <NConfigProvider :theme-overrides="customTheme">
+    <div v-if="isMobile === false">
       <Header h-8vh />
       <div class="root" max-w-1440px mx-auto px-16>
         <TopPage h-92vh />
@@ -55,6 +57,9 @@ import { isMobile } from './utils/isMobile';
     </div>
     <div v-else>
       <HeaderM h-7vh />
+      <Transition name="fade">
+        <MenuM v-if="menuStatus" />
+      </Transition>
       <div class="root mobile">
         <TopPageM h-93vh />
         <div my-3vh>
@@ -75,5 +80,5 @@ import { isMobile } from './utils/isMobile';
       </div>
       <Footer />
     </div>
-  </n-config-provider>
+  </NConfigProvider>
 </template>
