@@ -3,6 +3,6 @@ export default {
   sub: [
     '/toys/sub_01.jpg',
     '/toys/sub_02.jpg',
-    '/toys/sub_03.jpg'
-  ]
+    '/toys/sub_03.jpg',
+  ],
 }

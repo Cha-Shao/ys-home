@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import lodash from 'lodash'
 import { ref } from 'vue'
-import BigTitle from '../BigTitle.vue'
-import membersData from '../../Members'
+import BigTitle from '../../Base/BigTitle.vue'
+import membersData from '../../Base/Members'
 import MembersCard from './MembersCard.vue'
 
 const membersDataM = lodash.shuffle(membersData)

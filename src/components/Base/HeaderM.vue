@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useMenuStatus } from '../utils/showMenu'
+import { useMenuStatus } from '../../utils/showMenu'
 </script>
 
 <template>

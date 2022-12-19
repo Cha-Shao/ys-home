@@ -1,14 +1,86 @@
 {
+  "Form": {
+    "asteriskColor": "#FF3B30FF",
+    "feedbackTextColorError": "#d03050",
+    "labelTextAlignHorizontal": "left"
+  },
+  "LoadingBar": {
+    "colorLoading": "#FF8729FF"
+  },
+  "Input": {
+    "borderRadius": "7px",
+    "color": "#0000000F",
+    "colorFocus": "rgba(255, 255, 255, 0)",
+    "borderHover": "1px solid transparent",
+    "borderFocus": "1px solid #0000000f",
+    "boxShadowFocus": "0",
+    "caretColor": "#FF8729FF",
+    "colorFocusError": "#FFFFFF00",
+    "border": "1px solid transparent"
+  },
+  "Select": {
+    "peers": {
+      "InternalSelection": {
+        "borderRadius": "7px",
+        "color": "#0000000F",
+        "colorActive": "rgba(255, 255, 255, 0)",
+        "colorFocus": "rgba(255, 255, 255, 0)",
+        "borderActive": "1px solid transparent",
+        "borderHover": "1px solid transparent",
+        "borderFocus": "1px solid #0000000f",
+        "boxShadowActive": "0",
+        "boxShadowFocus": "0"
+      },
+      "InternalSelectMenu": {
+        "borderRadius": "7px",
+        "color": "#FAFAFDFF",
+        "optionColorPending": "#F0F0F6FF",
+        "optionTextColorActive": "#FF8729FF",
+        "optionCheckColor": "#FF8729FF"
+      }
+    }
+  },
+  "Upload": {
+    "borderRadius": "7px",
+    "draggerBorder": "1px solid transparent",
+    "draggerBorderHover": "1px solid transparent",
+    "draggerColor": "#0000000F",
+    "itemColorHover": "rgba(0, 0, 0, 0.06)",
+    "peers": {
+      "Progress": {
+        "fillColor": "#FF8729FF"
+      }
+    }
+  },
+  "Message": {
+    "borderRadius": "7px",
+    "color": "#FAFAFDFF",
+    "colorInfo": "#FAFAFDFF",
+    "colorSuccess": "#FAFAFDFF",
+    "colorError": "#FAFAFDFF",
+    "colorWarning": "#FAFAFDFF",
+    "colorLoading": "#FAFAFDFF"
+  },
+  "Button": {
+    "textColorHover": "#FF8729FF"
+  },
+  "Dropdown": {
+    "borderRadius": "7px",
+    "color": "#FAFAFDFF",
+    "optionColorHover": "#f0f0f6FF"
+  },
   "Tabs": {
-    "tabTextColorActiveLine": "#FF8729FF",
-    "tabTextColorHoverLine": "#FF8729FF",
-    "tabTextColorActiveBar": "#FF8729FF",
-    "tabTextColorHoverBar": "#FF8729FF",
-    "barColor": "#FF8729FF",
-    "tabTextColorActiveCard": "#FF8729FF",
-    "fontWeightStrong": ".",
-    "tabFontWeight": "600",
-    "tabFontWeightActive": "600",
-    "tabPaddingLargeLine": "4px 0"
+    "colorSegment": "#0000000F",
+    "tabColorSegment": "#FAFAFDFF",
+    "tabBorderRadius": "5px"
+  },
+  "common": {
+    "primaryColorHover": "#FF8729FF"
+  },
+  "Checkbox": {
+    "colorChecked": "#FF8729FF",
+    "borderChecked": "1px solid #FF8729",
+    "borderFocus": "1px solid #FF8729",
+    "boxShadowFocus": "0 0 0 2px #FF872940"
   }
 }

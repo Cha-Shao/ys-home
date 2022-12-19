@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useMenuStatus } from '../utils/showMenu'
+import { useMenuStatus } from '../../utils/showMenu'
 
 const links = [
   {
@@ -23,7 +23,7 @@ const links = [
     box-border
     w-80vw
     bg-bg
-    bg-op-85
+    bg-op-75
     backdrop-blur-md
     b-white
     b-1

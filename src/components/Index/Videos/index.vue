@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BigTitle from '../BigTitle.vue'
-import videosData from '../../Videos'
+import BigTitle from '../../Base/BigTitle.vue'
+import videosData from '../../Base/Videos'
 import VideoCard from './VideoCard.vue'
 </script>
 

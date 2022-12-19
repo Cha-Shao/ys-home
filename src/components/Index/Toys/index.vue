@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BigTitle from '../BigTitle.vue'
-import toysData from '../../Toys'
+import BigTitle from '../../Base/BigTitle.vue'
+import toysData from '../../Base/Toys'
 import ToysCard from './ToysCard.vue'
 </script>
 

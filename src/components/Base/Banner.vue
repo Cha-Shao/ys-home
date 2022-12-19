@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { NCarousel } from 'naive-ui'
 
-import bannerData from '../Banner'
+import bannerData from './Banner'
 </script>
 
 <template>

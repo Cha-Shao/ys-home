@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import BigTitle from '../BigTitle.vue'
+import BigTitle from '../../Base/BigTitle.vue'
 
-import modelIcon from '../../assets/icon/model_animation.png'
-import textureIcon from '../../assets/icon/texture_animation.png'
-import toiletIcon from '../../assets/icon/toilet_animation.png'
-import mapIcon from '../../assets/icon/map_animation.png'
+import modelIcon from '../../../assets/icon/model_animation.png'
+import textureIcon from '../../../assets/icon/texture_animation.png'
+import toiletIcon from '../../../assets/icon/toilet_animation.png'
+import mapIcon from '../../../assets/icon/map_animation.png'
 
 const iconFrames: any = ref({
   model: 0,

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { NCarousel, NTabPane, NTabs } from 'naive-ui'
 import lodash from 'lodash'
-import YButton from '../YButton.vue'
-import BigTitle from '../BigTitle.vue'
+import YButton from '../../Base/YButton.vue'
+import BigTitle from '../../Base/BigTitle.vue'
 
-import { timeAnalysis } from '../../utils/timeAnalysis'
+import { timeAnalysis } from '../../../utils/timeAnalysis'
 
 // 公告处理
-import newsData from '../../News'
+import newsData from '../../Base/News'
 import NewsCard from './NewsCard.vue'
 const news = newsData.news
 const latestNews = lodash.orderBy(news, 'time', 'desc').slice(0, 6)

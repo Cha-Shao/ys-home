@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import BigTitle from '../BigTitle.vue'
+import BigTitle from '../../Base/BigTitle.vue'
 
-import modelIcon from '../../assets/icon/model.png'
-import textureIcon from '../../assets/icon/texture.png'
-import toiletIcon from '../../assets/icon/toilet.png'
-import mapIcon from '../../assets/icon/map.png'
+import modelIcon from '../../../assets/icon/model.png'
+import textureIcon from '../../../assets/icon/texture.png'
+import toiletIcon from '../../../assets/icon/toilet.png'
+import mapIcon from '../../../assets/icon/map.png'
 
 const routes = [{
   title: '浏览模型',
