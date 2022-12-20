@@ -8,5 +8,8 @@ export default [{
   children: [{
     path: 'login',
     component: () => import('../components/SSO/login.vue'),
+  }, {
+    path: 'register',
+    component: () => import('../components/SSO/register.vue'),
   }],
 }]

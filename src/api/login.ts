@@ -13,7 +13,6 @@ const login = (username: string, password: string, keepLogin: boolean) => {
       .post('https://sso.elfmc.com/login', {
         username,
         password: sha256(password),
-        type: '7d9315',
         keepLogin,
       })
       .then((response) => {

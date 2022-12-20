@@ -28,7 +28,7 @@ const links = [
     <div flex items-center>
       <a v-for="(data, i) in links" :key="i" :href="data.link" target="_blank" hover:color-logo transition-200 font-500 px-4>{{ data.label }}</a>
       <div h-6 w-1px bg-hex-00000018 mx-4 />
-      <a href="/login">
+      <a href="/sso/login">
         <YButton primary mx-4>
           登录
         </YButton>
