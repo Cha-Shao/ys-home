@@ -12,8 +12,8 @@ const keepLogin: Ref<boolean> = ref(false)
 </script>
 
 <template>
-  <div mx-auto flex flex-col flex-gap-y-4 w="3/4" max-w-100>
-    <p text-2xl font-700>
+  <div flex flex-col flex-gap-y-2 w="3/4" max-w-100 bg-bg b-rd-4 pa-7 shadow-md>
+    <p text-2xl font-700 mb-2>
       登录到映素
     </p>
     <div class="w-full flex gap-x-4 items-center">
@@ -42,7 +42,7 @@ const keepLogin: Ref<boolean> = ref(false)
       </NCheckbox>
       <a href="/lostpassword" target="_blank" color-logo>忘记密码？</a>
     </div>
-    <YButton primary w-full @click="login(inputUsername, inputPassword, keepLogin)">
+    <YButton primary w-full mt-2 @click="login(inputUsername, inputPassword, keepLogin)">
       登录
     </YButton>
     <p text-3 text-center>

@@ -21,17 +21,18 @@ const register = (username: string, email: string, password: string, confirmPass
     window.$message.error('两次输入的密码不一致')
   }
   else {
+    password = sha256(password)
     axios
       .post('https://sso.elfmc.com/register', {
         username,
         email,
-        password: sha256(password),
+        password,
       })
       .then((response) => {
-        window.$message.success(response.data)
+        window.$message.success(response.data.msg)
       })
       .catch((error) => {
-        window.$message.error(error)
+        window.$message.error(error.response.data.msg)
       })
   }
 }

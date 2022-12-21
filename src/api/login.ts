@@ -16,8 +16,10 @@ const login = (username: string, password: string, keepLogin: boolean) => {
         keepLogin,
       })
       .then((response) => {
-        window.$message.success('登录成功')
-        console.error(response)
+        window.$message.success(response.data)
+        setTimeout(() => {
+          window.location.href = 'https://ys.elfmc.com/sso/check-email'
+        }, 1000)
       })
       .catch((error) => {
         window.$message.error(`登录失败，${error}`)

@@ -91,6 +91,9 @@
     "colorChecked": "#FF8729FF",
     "borderChecked": "1px solid #FF8729",
     "borderFocus": "1px solid #FF8729",
-    "boxShadowFocus": "0 0 0 2px #FF872940"
+    "boxShadowFocus": "0 0 0 2px #FF872940",
+    "color": "#0000000F",
+    "borderRadius": "4px",
+    "border": "1px solid transparent"
   }
 }

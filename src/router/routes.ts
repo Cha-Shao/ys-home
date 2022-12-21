@@ -11,5 +11,11 @@ export default [{
   }, {
     path: 'register',
     component: () => import('../components/SSO/register.vue'),
+  }, {
+    path: 'check_email',
+    component: () => import('../components/SSO/checkEmail.vue'),
+  }, {
+    path: 'confirm_account',
+    component: () => import('../components/SSO/confirmAccount.vue'),
   }],
 }]

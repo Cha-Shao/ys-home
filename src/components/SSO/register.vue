@@ -13,8 +13,8 @@ const confirmPassword: Ref<string> = ref('')
 </script>
 
 <template>
-  <div mx-auto flex flex-col flex-gap-y-4 w="3/4" max-w-100>
-    <p text-2xl font-700>
+  <div flex flex-col flex-gap-y-2 w="3/4" max-w-100 bg-bg b-rd-4 pa-7 shadow-md>
+    <p text-2xl font-700 mb-2>
       注册映素账号
     </p>
     <div class="w-full flex gap-x-4 items-center">
@@ -23,9 +23,10 @@ const confirmPassword: Ref<string> = ref('')
         v-model:value="inputUsername"
         type="text"
         placeholder="仅支持英文+数字"
+        :maxlength="16"
       />
     </div>
-    <p text-3 color-coolgray my--2>
+    <p text-3 color-coolgray>
       你的主页链接将是space/{{ inputUsername }}
     </p>
     <div class="w-full flex gap-x-4 items-center">
@@ -58,7 +59,7 @@ const confirmPassword: Ref<string> = ref('')
         @keyup.enter="register(inputUsername, inputEmail, inputPassword, confirmPassword)"
       />
     </div>
-    <YButton primary w-full @click="register(inputUsername, inputEmail, inputPassword, confirmPassword)">
+    <YButton primary w-full mt-2 @click="register(inputUsername, inputEmail, inputPassword, confirmPassword)">
       注册
     </YButton>
     <p text-3 text-center>

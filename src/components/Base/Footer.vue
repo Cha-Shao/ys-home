@@ -29,7 +29,7 @@ const links = [{
       </div>
     </div>
     <div px-4 py-2 flex justify-between>
-      <p>© Copyright {{ new Date().getFullYear() }} YingSu</p>
+      <p>© Copyright {{ new Date().getFullYear() }} MMixel</p>
       <p>#FF8729</p>
     </div>
   </div>

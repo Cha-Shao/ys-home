@@ -7,7 +7,7 @@ const content = `因为年轻，什么都敢于尝试
 
 <template>
   <div flex flex-col justify-center items-center text-center relative>
-    <img src="/favicon-small.svg" alt="YingSu" w="33%" lt-lg:w="50%" lt-md:w="75%" mb-12>
+    <img src="/favicon-small.svg" alt="MMixel" w="33%" lt-lg:w="50%" lt-md:w="75%" mb-12>
     <h1 text-7xl>
       晚点再想（）
     </h1>
