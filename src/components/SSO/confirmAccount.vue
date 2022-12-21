@@ -11,7 +11,7 @@ confirmAccount(token)
 </script>
 
 <template>
-  <div pa-7 b-rd-4 bg-bg shadow-md min-w-120>
+  <div pa-7 rounded-4 bg-bg shadow-md min-w-120>
     <div>
       <p text-2xl font-700 mb-2>
         {{ resultText.title }}

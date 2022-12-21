@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<{
     items-center
     py-2
     px-4
-    b-rd-2
+    rounded-2
     bg-logo
     text-white
     shadow-md

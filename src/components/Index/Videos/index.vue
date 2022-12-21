@@ -18,7 +18,7 @@ import VideoCard from './VideoCard.vue'
       grid-col-span-4 main grid-row-span-2 :title="videosData.main.title" :brief="videosData.main.brief"
       :cover="videosData.main.cover" :link="videosData.main.link"
     />
-    <div shadow-md bg-bg b-rd-4 flex justify-between items-center grid-col-span-3>
+    <div shadow-md bg-bg rounded-4 flex justify-between items-center grid-col-span-3>
       <BigTitle main="动画" sub="作品" />
     </div>
     <VideoCard

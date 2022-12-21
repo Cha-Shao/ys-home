@@ -10,9 +10,9 @@ const props = defineProps<{
 
 <template>
   <a v-if="props.link" :href="props.link" target="_blank" block>
-    <div pa-6 bg-bg b-rd-4 relative>
+    <div pa-6 bg-bg rounded-4 relative>
       <div flex mb-2>
-        <img :src="props.avatar" alt="Avatar" mr-4 b-rd-99 w-15 h-15 block>
+        <img :src="props.avatar" alt="Avatar" mr-4 rounded-99 w-15 h-15 block>
         <div flex items-center>
           <div>
             <h1 text-lg>{{ props.name }}</h1>
@@ -24,9 +24,9 @@ const props = defineProps<{
       <div i-ri:external-link-line absolute right-3 top-3 color-coolgray />
     </div>
   </a>
-  <div v-else pa-6 bg-bg b-rd-4>
+  <div v-else pa-6 bg-bg rounded-4>
     <div flex mb-2>
-      <img :src="props.avatar" alt="Avatar" mr-4 b-rd-99 w-15 h-15 block>
+      <img :src="props.avatar" alt="Avatar" mr-4 rounded-99 w-15 h-15 block>
       <div flex items-center>
         <div>
           <h1 text-lg>

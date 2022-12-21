@@ -20,7 +20,7 @@ import ToysCard from './ToysCard.vue'
       h-full
       :cover="data"
     />
-    <div shadow-md bg-bg b-rd-4 grid-col-span-3 flex justify-between items-center>
+    <div shadow-md bg-bg rounded-4 grid-col-span-3 flex justify-between items-center>
       <BigTitle main="周边" sub="研发" />
     </div>
   </div>

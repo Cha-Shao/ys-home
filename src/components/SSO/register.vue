@@ -13,7 +13,7 @@ const confirmPassword: Ref<string> = ref('')
 </script>
 
 <template>
-  <div flex flex-col flex-gap-y-2 w="3/4" max-w-100 bg-bg b-rd-4 pa-7 shadow-md>
+  <div flex flex-col flex-gap-y-2 w="3/4" max-w-100 bg-bg rounded-4 pa-7 shadow-md>
     <p text-2xl font-700 mb-2>
       注册映素账号
     </p>

@@ -30,7 +30,7 @@ const routes = [{
     <BigTitle main="映素" sub="作坊" mobile mb-6 />
     <div flex overflow-x-scroll pb-2>
       <a v-for="(data, i) in routes" :key="i" :href="data.link" target="_blank" m-2>
-        <div w-60 h-75 bg-bg b-rd-4 shadow-md flex flex-col justify-center items-center>
+        <div w-60 h-75 bg-bg rounded-4 shadow-md flex flex-col justify-center items-center>
           <img :src="data.icon" alt="Icon" mb-4>
           <h3 mt-4 h-sm>{{ data.title }}</h3>
         </div>

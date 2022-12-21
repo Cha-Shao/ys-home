@@ -11,16 +11,16 @@ const props = defineProps<{
 <template>
   <a
     :href="props.link" target="_blank" px-4 bg-pbg block mb-1 flex items-center
-    :class="[props.mobile ? 'h-12 b-rd-2' : 'py-6 b-rd-4']"
+    :class="[props.mobile ? 'h-12 rounded-2' : 'py-6 rounded-4']"
   >
     <div mr-4 color-white shrink-0>
-      <div v-if="props.type === 'news'" bg-hex-45f5a9 px-2 py-1 b-rd-1>
+      <div v-if="props.type === 'news'" bg-hex-45f5a9 px-2 py-1 rounded-1>
         <p text-3>新闻</p>
       </div>
-      <div v-else-if="props.type === 'active'" bg-hex-00b3fd px-2 py-1 b-rd-1>
+      <div v-else-if="props.type === 'active'" bg-hex-00b3fd px-2 py-1 rounded-1>
         <p text-3>活动</p>
       </div>
-      <div v-else bg-logo px-2 py-1 b-rd-1>
+      <div v-else bg-logo px-2 py-1 rounded-1>
         <p text-3>公告</p>
       </div>
     </div>

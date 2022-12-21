@@ -19,7 +19,7 @@ const announceNews = lodash.filter(news, { type: 'announce' }).slice(0, 6)
 <template>
   <div>
     <BigTitle main="新闻" sub="动态" mobile mb-6 />
-    <div bg-bg b-rd-4 shadow-md mx-2 overflow-hidden>
+    <div bg-bg rounded-4 shadow-md mx-2 overflow-hidden>
       <NCarousel draggable autoplay>
         <a v-for="(data, i) in newsData.carousel" :key="i" :href="data.link" target="_blank">
           <img :src="data.img" alt="Carousel Image" w-full h-64 object-cover>

@@ -11,7 +11,7 @@ const props = defineProps<{
 
 <template>
   <a :href="props.link" target="_blank" :class="[props.mobile ? 'h-75' : 'h-full']">
-    <div shadow-md bg-bg b-rd-4 overflow-hidden h-full flex flex-col>
+    <div shadow-md bg-bg rounded-4 overflow-hidden h-full flex flex-col>
       <img
         :src="props.cover" alt="cover" flex-grow w-full block object-cover :class="[
           props.main ? '' : 'aspect-ratio-960/600',

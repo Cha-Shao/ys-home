@@ -5,6 +5,7 @@ import { ref } from 'vue'
 
 import login from '../../api/login'
 import YButton from '../Base/YButton.vue'
+import BookMark from '../Base/BookMark.vue'
 
 const inputUsername: Ref<string> = ref('')
 const inputPassword: Ref<string> = ref('')
@@ -12,7 +13,12 @@ const keepLogin: Ref<boolean> = ref(false)
 </script>
 
 <template>
-  <div flex flex-col flex-gap-y-2 w="3/4" max-w-100 bg-bg b-rd-4 pa-7 shadow-md>
+  <div flex flex-col flex-gap-y-2 w="3/4" max-w-100 bg-bg rounded-4 pa-7 shadow-md relative>
+    <BookMark cursor-pointer>
+      <div flex items-center>
+        注册<div i-ri:arrow-right-s-line />
+      </div>
+    </BookMark>
     <p text-2xl font-700 mb-2>
       登录到映素
     </p>
@@ -22,7 +28,6 @@ const keepLogin: Ref<boolean> = ref(false)
         v-model:value="inputUsername"
         type="text"
         placeholder="账号"
-        :maxlength="16"
       />
     </div>
     <div class="w-full flex gap-x-4 items-center">

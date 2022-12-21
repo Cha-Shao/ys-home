@@ -21,7 +21,7 @@ const links = [{
         <div flex gap-2>
           <a
             v-for="(data, i) in links" :key="i" :href="data.to" :title="data.title" icon-btn pa-1 bg-pbg
-            b-rd-99
+            rounded-99
           >
             <div :class="data.icon" />
           </a>
