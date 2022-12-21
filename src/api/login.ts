@@ -14,6 +14,8 @@ const login = (username: string, password: string, keepLogin: boolean) => {
         username,
         password: sha256(password),
         keepLogin,
+      }, {
+        withCredentials: true,
       })
       .then((response) => {
         window.$message.success(response.data.msg)
