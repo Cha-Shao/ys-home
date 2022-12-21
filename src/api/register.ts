@@ -30,6 +30,9 @@ const register = (username: string, email: string, password: string, confirmPass
       })
       .then((response) => {
         window.$message.success(response.data.msg)
+        setTimeout(() => {
+          window.location.href = 'https://ys.elfmc.com/sso/check_email'
+        }, 1000)
       })
       .catch((error) => {
         window.$message.error(error.response.data.msg)
