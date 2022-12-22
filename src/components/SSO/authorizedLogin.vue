@@ -1,0 +1,64 @@
+<script setup lang="ts">
+import { useRoute } from 'vue-router'
+import { loginStatus } from '../../api/checkLogin'
+import { appInfo, getAppInfo } from '../../api/getAppInfo'
+import YButton from '../Base/YButton.vue'
+
+const route = useRoute()
+
+const appid = route.query.appid
+getAppInfo(String(appid))
+const redirect_uri = route.query.redirect_uri
+
+const token = localStorage.getItem('token')
+
+const canDo = [
+  '获得您的用户名和邮件地址',
+]
+const cantDo = [
+  '清理你堵住的马桶',
+  '做个巧克力蛋糕',
+  '为你讲睡前故事',
+]
+</script>
+
+<template>
+  <div flex flex-col flex-gap-y-2 w="3/4" max-w-100 bg-bg rounded-4 pa-7 shadow-md>
+    <p text-2xl font-700 mb-2>
+      授权登录
+    </p>
+    <div v-if="appInfo.status === 'loading'">
+      <div h-20 rounded-4 bg-gray-2 animate-pulse mb-4 />
+      <div h-6 rounded-2 bg-gray-2 animate-pulse mb-2 />
+      <div h-6 rounded-2 bg-gray-2 animate-pulse />
+    </div>
+    <div v-else-if="appInfo.status === 'success'">
+      <p>以<span color-logo>{{ loginStatus.name }}</span>身份授权登录到：</p>
+      <div bg-hex-0000000f rounded-4 pa-2 flex items-center mb-4>
+        <img :src="appInfo.app_avatar" alt="Avatar" w-16 h-16 rounded-2 mr-4>
+        <p>{{ appInfo.app_name }}</p>
+      </div>
+      <div>
+        <p text-3>
+          允许后{{ appInfo.app_name }}将可以：
+        </p>
+        <div v-for="(data, i) in canDo" :key="i" flex items-center mb-1>
+          <div w-2 h-2 rounded-99 bg-green mr-2 />
+          {{ data }}
+        </div>
+        <div flex items-center mb-1>
+          <div w-2 h-2 rounded-99 bg-gray-4 mr-2 />
+          {{ cantDo[Math.floor(Math.random() * cantDo.length)] }}
+        </div>
+      </div>
+      <div flex gap-2 mt-4>
+        <YButton gray size="large" w="1/2">
+          拒绝
+        </YButton>
+        <a :href="`${redirect_uri}?authorized_token=${token}`" w="1/2">
+          <YButton size="large" primary w="full">授权登录</YButton>
+        </a>
+      </div>
+    </div>
+  </div>
+</template>

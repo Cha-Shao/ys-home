@@ -20,14 +20,10 @@ const login = (username: string, password: string, keepLogin: boolean) => {
       .then((response) => {
         window.$message.success(response.data.msg)
         const token = response.data.token
-        let expTime
-        if (keepLogin) {
-          const expDays = new Date()
-          expDays.setTime(expDays.getTime() + (28 * 24 * 60 * 60 * 1000))
-          expTime = expDays.toUTCString()
-        }
-        else { expTime = 0 }
-        document.cookie = `uuid=${token};expires=${expTime};path=/;secure;`
+        if (keepLogin)
+          localStorage.setItem('token', token)
+        else
+          sessionStorage.setItem('token', token)
         setTimeout(() => {
           window.location.href = 'https://ys.elfmc.com/'
         }, 1000)

@@ -1,32 +1,20 @@
 <script lang="ts" setup>
-const props = withDefaults(defineProps<{
-  primary?: boolean
-  round?: boolean
-  translucent?: boolean
-  size?: 'small' | 'normal' | 'large'
-  bordered?: boolean
-  loading?: boolean
-  disabled?: boolean
-  finished?: boolean
-  color?: string
-}>(), {
-  size: 'normal',
-})
+const props = defineProps<{
+  gray?: boolean
+}>()
 </script>
 
 <template>
   <button
-    :disabled="props.disabled"
     flex
     justify-center
     items-center
     py-2
     px-4
     rounded-2
-    bg-logo
-    text-white
-    shadow-md
-    shadow="logo/33"
+    :class="[
+      props.gray ? 'bg-gray-3 color-black' : 'bg-logo shadow-md shadow-logo/33 color-white',
+    ]"
     border-none
     cursor-pointer
   >

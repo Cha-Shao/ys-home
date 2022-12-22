@@ -5,17 +5,28 @@ import { ref } from 'vue'
 export const loginStatus: Ref<any> = ref({ msg: '登录中', name: null, status: null })
 
 const checkLogin = () => {
-  axios
-    .post('https://sso.elfmc.com/check_login', {}, {
-      withCredentials: true,
-    })
-    .then((response) => {
-      loginStatus.value = response.data
-    })
-    .catch((error) => {
-      console.error(error)
-      loginStatus.value.status = false
-    })
+  const token = localStorage.getItem('token') || sessionStorage.getItem('token')
+  // 登录信息存在
+  if (token) {
+    axios
+      .post('https://sso.elfmc.com/check_login', {
+        token,
+      }, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        loginStatus.value = response.data
+        if (response.data.msg === '未登录') {
+          // 如果登陆凭证失效就顺便清一下垃圾
+          localStorage.removeItem('token')
+          localStorage.removeItem('token_exp')
+        }
+      })
+      .catch((error) => {
+        console.error(error)
+        loginStatus.value.status = false
+      })
+  }
 }
 
 checkLogin()

@@ -17,5 +17,8 @@ export default [{
   }, {
     path: 'confirm_account',
     component: () => import('../components/SSO/confirmAccount.vue'),
+  }, {
+    path: 'authorized_login',
+    component: () => import('../components/SSO/authorizedLogin.vue'),
   }],
 }]

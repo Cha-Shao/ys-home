@@ -29,7 +29,11 @@ const links = [
     <div flex items-center>
       <a v-for="(data, i) in links" :key="i" :href="data.link" target="_blank" hover:color-logo transition-200 font-500 px-4>{{ data.label }}</a>
       <div h-6 w-1px bg-hex-00000018 mx-4 />
-      <a v-if="loginStatus.status === false" href="/sso/login">
+
+      <div v-if="loginStatus.status === null" h-6 w-6 flex>
+        <div m-auto class="loading" i-ri:loader-5-line />
+      </div>
+      <a v-else-if="loginStatus.status === false" href="/sso/login">
         <YButton primary mx-4>
           登录
         </YButton>
@@ -40,3 +44,15 @@ const links = [
     </div>
   </div>
 </template>
+
+<style scoped>
+.loading{
+  animation: loading 0.75s infinite;
+  animation-timing-function:linear;
+}
+@keyframes loading{
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(135deg);}
+  100% {transform: rotate(360deg);}
+}
+</style>
