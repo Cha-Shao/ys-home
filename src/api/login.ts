@@ -27,9 +27,9 @@ const login = (username: string, password: string, keepLogin: boolean) => {
           expTime = expDays.toUTCString()
         }
         else { expTime = 0 }
-        document.cookie = `token=${token};expires=${expTime}`
+        document.cookie = `uuid=${token};expires=${expTime};path=/`
         setTimeout(() => {
-          window.location.href = 'https://ys.elfmc.com/'
+          // window.location.href = 'https://ys.elfmc.com/'
         }, 1000)
       })
       .catch((error) => {

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { loginStatus } from '../../api/checkLogin'
 import YButton from './YButton.vue'
 
 const links = [
@@ -28,11 +29,14 @@ const links = [
     <div flex items-center>
       <a v-for="(data, i) in links" :key="i" :href="data.link" target="_blank" hover:color-logo transition-200 font-500 px-4>{{ data.label }}</a>
       <div h-6 w-1px bg-hex-00000018 mx-4 />
-      <a href="/sso/login">
+      <a v-if="loginStatus.status === false" href="/sso/login">
         <YButton primary mx-4>
           登录
         </YButton>
       </a>
+      <p v-else>
+        {{ loginStatus.name }}
+      </p>
     </div>
   </div>
 </template>
