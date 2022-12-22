@@ -19,6 +19,15 @@ const login = (username: string, password: string, keepLogin: boolean) => {
       })
       .then((response) => {
         window.$message.success(response.data.msg)
+        const token = response.data.token
+        let expTime
+        if (keepLogin) {
+          const expDays = new Date()
+          expDays.setTime(expDays.getTime() + (28 * 24 * 60 * 60 * 1000))
+          expTime = expDays.toUTCString()
+        }
+        else { expTime = 0 }
+        document.cookie = `token=${token};expires=${expTime}`
         setTimeout(() => {
           window.location.href = 'https://ys.elfmc.com/'
         }, 1000)
