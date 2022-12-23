@@ -1,16 +1,28 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { loginStatus } from '../../api/checkLogin'
-import { appInfo, getAppInfo } from '../../api/getAppInfo'
+import { appInfo, authorizedLogin } from '../../api/getAppInfo'
 import YButton from '../Base/YButton.vue'
 
 const route = useRoute()
 
 const appid = route.query.appid
-getAppInfo(String(appid))
+authorizedLogin.getAppInfo(String(appid))
 const redirect_uri = route.query.redirect_uri
 
 const token = localStorage.getItem('token')
+
+const authorize = async () => {
+  let authorizeToken
+  if (appid && token) {
+    authorizeToken = await authorizedLogin.getToken(String(appid), token)
+    if (authorizeToken)
+      window.location.href = `${redirect_uri}?token=${authorizeToken}`
+    else
+      window.$message.error('获取不到授权码')
+  }
+  else { window.$message.error('没有参数') }
+}
 
 const canDo = [
   '获得您的用户名和邮件地址',
@@ -55,9 +67,9 @@ const cantDo = [
         <YButton gray size="large" w="1/2">
           拒绝
         </YButton>
-        <a :href="`${redirect_uri}?authorized_token=${token}`" w="1/2">
-          <YButton size="large" primary w="full">授权登录</YButton>
-        </a>
+        <YButton size="large" primary w="1/2" @click="authorize()">
+          授权登录
+        </YButton>
       </div>
     </div>
   </div>

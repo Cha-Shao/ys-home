@@ -6,19 +6,40 @@ export const appInfo: Ref<any> = ref({
   status: 'loading',
 })
 
-export const getAppInfo = (appid: string) => {
-  axios
-    .get('https://sso.elfmc.com/get_app_info', {
-      params: {
+class ClassAuthorizedLogin {
+  getAppInfo = (appid: string) => {
+    axios
+      .get('https://sso.elfmc.com/authorized_login/get_app', {
+        params: {
+          appid,
+        },
+      })
+      .then((response) => {
+        appInfo.value = response.data
+        appInfo.value.status = 'success'
+      })
+      .catch((error) => {
+        console.error(error)
+        appInfo.value.status = 'error'
+      })
+  }
+
+  getToken = async (appid: string, token: string) => {
+    let authorizeToken
+    await axios
+      .post('https://sso.elfmc.com/authorized_login/get_token', {
         appid,
-      },
-    })
-    .then((response) => {
-      appInfo.value = response.data
-      appInfo.value.status = 'success'
-    })
-    .catch((error) => {
-      console.error(error)
-      appInfo.value.status = 'error'
-    })
+        token,
+      })
+      .then((response) => {
+        authorizeToken = response.data.uuid
+      })
+      .catch((error) => {
+        console.error(error)
+        authorizeToken = null
+      })
+    return authorizeToken
+  }
 }
+
+export const authorizedLogin = new ClassAuthorizedLogin()
