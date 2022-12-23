@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { h } from 'vue'
+import { NDropdown, useMessage } from 'naive-ui'
 import { loginStatus } from '../../api/checkLogin'
 import YButton from './YButton.vue'
 
@@ -16,6 +18,30 @@ const links = [
     link: 'https://store.elfmc.com/contact',
   },
 ]
+
+const renderIcon = (icon: string) => {
+  return () => {
+    return h('div', { class: icon })
+  }
+}
+
+const dropDownOptions = [{
+  label: '退出登录',
+  key: '/logout',
+  icon: renderIcon('i-ri:logout-box-r-line'),
+}]
+
+const message = useMessage()
+const handleSelect = (key: string) => {
+  if (key === '/logout') {
+    localStorage.removeItem('token')
+    sessionStorage.removeItem('token')
+    message.success('已退出登录')
+    setTimeout(() => {
+      window.location.reload()
+    }, 1000)
+  }
+}
 </script>
 
 <template>
@@ -39,7 +65,9 @@ const links = [
         </YButton>
       </a>
       <p v-else>
-        {{ loginStatus.name }}
+        <NDropdown trigger="hover" :options="dropDownOptions" @select="handleSelect">
+          {{ loginStatus.name }}
+        </NDropdown>
       </p>
     </div>
   </div>

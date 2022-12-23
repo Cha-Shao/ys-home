@@ -21,11 +21,15 @@ const checkLogin = () => {
           localStorage.removeItem('token')
           localStorage.removeItem('token_exp')
         }
+        else { loginStatus.value.status = true }
       })
       .catch((error) => {
         console.error(error)
         loginStatus.value.status = false
       })
+  }
+  else {
+    loginStatus.value.status = false
   }
 }
 

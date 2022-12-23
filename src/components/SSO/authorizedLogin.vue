@@ -11,6 +11,12 @@ authorizedLogin.getAppInfo(String(appid))
 const redirect_uri = route.query.redirect_uri
 
 const token = localStorage.getItem('token')
+if (token === null) {
+  window.$message.error('未登录')
+  setTimeout(() => {
+    window.location.href = '/'
+  }, 1000)
+}
 
 const authorize = async () => {
   let authorizeToken
