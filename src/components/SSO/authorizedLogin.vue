@@ -24,6 +24,10 @@ const authorize = async () => {
   else { window.$message.error('没有参数') }
 }
 
+const reject = () => {
+  window.close()
+}
+
 const canDo = [
   '获得您的用户名和邮件地址',
 ]
@@ -64,7 +68,7 @@ const cantDo = [
         </div>
       </div>
       <div flex gap-2 mt-4>
-        <YButton gray size="large" w="1/2">
+        <YButton gray size="large" w="1/2" @click="reject()">
           拒绝
         </YButton>
         <YButton size="large" primary w="1/2" @click="authorize()">
