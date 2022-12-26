@@ -9,18 +9,18 @@ import ToysCard from './ToysCard.vue'
     <ToysCard
       main
       h-full
-      grid-col-span-4
-      grid-row-span-2
+      col-span-4
+      row-span-2
       :cover="toysData.main"
     />
     <ToysCard
-      v-for="(data, i) in toysData.sub"
+      v-for="(data, i) in toysData.normal"
       :key="i"
-      grid-col-span-3
+      col-span-3
       h-full
       :cover="data"
     />
-    <div shadow-md bg-bg rounded-4 grid-col-span-3 flex justify-between items-center>
+    <div shadow-md bg-bg rounded-4 col-span-3 flex justify-between items-center>
       <BigTitle main="周边" sub="研发" />
     </div>
   </div>

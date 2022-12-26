@@ -7,23 +7,25 @@ import VideoCard from './VideoCard.vue'
 <template>
   <div w-full grid grid-cols-10 grid-rows-2 gap-4>
     <VideoCard
-      grid-col-span-3 :title="videosData.leftTop.title" :brief="videosData.leftTop.brief"
-      :cover="videosData.leftTop.cover" :link="videosData.leftTop.link"
+      v-for="(data, i) in videosData.normal"
+      :key="i"
+      col-span-3
+      :title="data.title"
+      :brief="data.brief"
+      :cover="data.cover"
+      :link="data.link"
     />
     <VideoCard
-      grid-col-span-3 :title="videosData.rightTop.title" :brief="videosData.rightTop.brief"
-      :cover="videosData.rightTop.cover" :link="videosData.rightTop.link"
+      col-span-4 col-start-7
+      row-span-2 row-start-1
+      main
+      :title="videosData.main.title"
+      :brief="videosData.main.brief"
+      :cover="videosData.main.cover"
+      :link="videosData.main.link"
     />
-    <VideoCard
-      grid-col-span-4 main grid-row-span-2 :title="videosData.main.title" :brief="videosData.main.brief"
-      :cover="videosData.main.cover" :link="videosData.main.link"
-    />
-    <div shadow-md bg-bg rounded-4 flex justify-between items-center grid-col-span-3>
+    <div shadow-md bg-bg rounded-4 flex justify-between items-center col-span-3>
       <BigTitle main="动画" sub="作品" />
     </div>
-    <VideoCard
-      grid-col-span-3 :title="videosData.rightBottom.title" :brief="videosData.rightBottom.brief"
-      :cover="videosData.rightBottom.cover" :link="videosData.rightBottom.link"
-    />
   </div>
 </template>
