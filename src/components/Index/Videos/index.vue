@@ -7,7 +7,7 @@ import VideoCard from './VideoCard.vue'
 <template>
   <div w-full grid grid-cols-10 grid-rows-2 gap-4>
     <VideoCard
-      v-for="(data, i) in videosData.normal"
+      v-for="(data, i) in videosData.slice(1)"
       :key="i"
       col-span-3
       :title="data.title"
@@ -19,10 +19,10 @@ import VideoCard from './VideoCard.vue'
       col-span-4 col-start-7
       row-span-2 row-start-1
       main
-      :title="videosData.main.title"
-      :brief="videosData.main.brief"
-      :cover="videosData.main.cover"
-      :link="videosData.main.link"
+      :title="videosData[0].title"
+      :brief="videosData[0].brief"
+      :cover="videosData[0].cover"
+      :link="videosData[0].link"
     />
     <div shadow-md bg-bg rounded-4 flex justify-between items-center col-span-3>
       <BigTitle main="动画" sub="作品" />

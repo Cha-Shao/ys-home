@@ -11,10 +11,10 @@ import ToysCard from './ToysCard.vue'
       h-full
       col-span-4
       row-span-2
-      :cover="toysData.main"
+      :cover="toysData[0]"
     />
     <ToysCard
-      v-for="(data, i) in toysData.normal"
+      v-for="(data, i) in toysData.slice(1)"
       :key="i"
       col-span-3
       h-full
