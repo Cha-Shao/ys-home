@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { sha256 } from 'js-sha256'
 
-const login = (username: string, password: string, keepLogin: boolean) => {
+const login = (username: string, password: string) => {
   if (username === '') {
     window.$message.error('未输入用户名')
   }
@@ -10,20 +10,14 @@ const login = (username: string, password: string, keepLogin: boolean) => {
   }
   else {
     axios
-      .post('https://sso.elfmc.com/login', {
+      .post('https://sso.elfmc.com/account/login', {
         username,
         password: sha256(password),
-        keepLogin,
       }, {
         withCredentials: true,
       })
       .then((response) => {
         window.$message.success(response.data.msg)
-        const token = response.data.token
-        if (keepLogin)
-          localStorage.setItem('token', token)
-        else
-          sessionStorage.setItem('token', token)
         setTimeout(() => {
           window.location.href = 'https://ys.elfmc.com/'
         }, 1000)

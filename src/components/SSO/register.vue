@@ -14,14 +14,17 @@ const confirmPassword: Ref<string> = ref('')
 
 <template>
   <div flex flex-col flex-gap-y-2 w="3/4" max-w-100 bg-bg rounded-4 pa-7 shadow-md relative>
-    <a href="/sso/login" absolute right--3 top-7>
-      <YButton primary size="small">
+    <div flex items-center mb-2 gap-2>
+      <p text-2xl font-700>
+        登录到映素
+      </p>
+      <p text-coolgray>
+        |
+      </p>
+      <a href="/sso/login" text-coolgray>
         登录
-      </YButton>
-    </a>
-    <p text-2xl font-700 mb-2>
-      注册映素账号
-    </p>
+      </a>
+    </div>
     <div class="w-full flex gap-x-4 items-center">
       <span class="shrink-0">用户名</span>
       <NInput

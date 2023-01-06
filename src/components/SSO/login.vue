@@ -8,19 +8,21 @@ import YButton from '../Base/YButton.vue'
 
 const inputUsername: Ref<string> = ref('')
 const inputPassword: Ref<string> = ref('')
-const keepLogin: Ref<boolean> = ref(false)
 </script>
 
 <template>
   <div flex flex-col flex-gap-y-2 w="3/4" max-w-100 bg-bg rounded-4 pa-7 shadow-md relative>
-    <a href="/sso/register" absolute right--3 top-7>
-      <YButton primary size="small">
+    <div flex items-center mb-2 gap-2>
+      <p text-2xl font-700>
+        登录到映素
+      </p>
+      <p text-coolgray>
+        |
+      </p>
+      <a href="/sso/register" text-coolgray>
         注册
-      </YButton>
-    </a>
-    <p text-2xl font-700 mb-2>
-      登录到映素
-    </p>
+      </a>
+    </div>
     <div class="w-full flex gap-x-4 items-center">
       <span class="shrink-0">账号</span>
       <NInput
@@ -37,16 +39,13 @@ const keepLogin: Ref<boolean> = ref(false)
         show-password-on="mousedown"
         placeholder="密码"
         :maxlength="16"
-        @keyup.enter="login(inputUsername, inputPassword, keepLogin)"
+        @keyup.enter="login(inputUsername, inputPassword)"
       />
     </div>
     <div flex justify-between>
-      <NCheckbox v-model:checked="keepLogin">
-        保持登录
-      </NCheckbox>
       <a href="/lostpassword" target="_blank" color-logo>忘记密码？</a>
     </div>
-    <YButton primary w-full mt-2 @click="login(inputUsername, inputPassword, keepLogin)">
+    <YButton primary w-full @click="login(inputUsername, inputPassword)">
       登录
     </YButton>
     <p text-3 text-center>

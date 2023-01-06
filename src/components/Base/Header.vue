@@ -59,16 +59,16 @@ const handleSelect = (key: string) => {
       <div v-if="loginStatus.status === null" h-6 w-6 flex>
         <div m-auto class="loading" i-ri:loader-5-line />
       </div>
-      <a v-else-if="loginStatus.status === false" href="/sso/login">
+      <p v-else-if="loginStatus.status === true">
+        <NDropdown trigger="hover" :options="dropDownOptions" @select="handleSelect">
+          {{ loginStatus.username }}
+        </NDropdown>
+      </p>
+      <a v-else href="/sso/login">
         <YButton primary mx-4>
           登录
         </YButton>
       </a>
-      <p v-else>
-        <NDropdown trigger="hover" :options="dropDownOptions" @select="handleSelect">
-          {{ loginStatus.name }}
-        </NDropdown>
-      </p>
     </div>
   </div>
 </template>

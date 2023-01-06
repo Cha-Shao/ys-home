@@ -23,7 +23,7 @@ const register = (username: string, email: string, password: string, confirmPass
   else {
     password = sha256(password)
     axios
-      .post('https://sso.elfmc.com/register', {
+      .post('https://sso.elfmc.com/account/register', {
         username,
         email,
         password,
