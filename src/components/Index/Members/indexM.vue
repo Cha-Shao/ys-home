@@ -13,8 +13,23 @@ const showMember = ref(0)
 <template>
   <div>
     <BigTitle main="映素" sub="成员" mobile mb-6 />
-    <div flex overflow-x-scroll px-2 mb-4>
-      <img v-for="(data, i) in membersDataM" :key="i" :src="data.avatar" alt="Avatar" mr-4 rounded-99 w-15 h-15 block shrink-0 @click="showMember = i">
+    <div flex overflow-x-scroll px-2 pt-2 pb-4>
+      <img
+        v-for="(data, i) in membersDataM" :key="i"
+        :src="data.avatar"
+        alt="Avatar"
+        mr-4
+        rounded-99
+        w-15
+        h-15
+        block
+        shrink-0
+        transition-200
+        :class="
+          i === showMember ? 'translate-y--1 shadow-md scale-110' : ''
+        "
+        @click="showMember = i"
+      >
     </div>
     <div v-for="(data, i) in membersDataM" :key="i">
       <MembersCard

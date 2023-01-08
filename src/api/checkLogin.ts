@@ -7,7 +7,6 @@ export const loginStatus: Ref<any> = ref({ msg: '登录中', username: null, sta
 
 const checkLogin = () => {
   const token = get_cookie('token')
-  console.log(token)
 
   // 登录信息存在
   if (token) {
