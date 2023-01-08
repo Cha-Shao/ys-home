@@ -18,6 +18,7 @@ const login = (username: string, password: string) => {
       })
       .then((response) => {
         window.$message.success(response.data.msg)
+        window.localStorage.setItem('token', response.data.token)
         setTimeout(() => {
           window.location.href = 'https://ys.elfmc.com/'
         }, 1000)
