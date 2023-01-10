@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { loginStatus } from '../../api/checkLogin'
-import { appInfo, authorizedLogin } from '../../api/getAppInfo'
+import { appInfo, authorizedLogin } from '../../api/authorizedLogin'
 import YButton from '../Base/YButton.vue'
 
 const route = useRoute()
 
-const appid = route.query.appid
-authorizedLogin.getAppInfo(String(appid))
+const app_id = route.query.app_id
+authorizedLogin.getAppInfo(String(app_id))
 const redirect_uri = route.query.redirect_uri
 
 const token = localStorage.getItem('token')
@@ -18,14 +18,19 @@ if (token === null) {
   }, 1000)
 }
 
-const authorize = async () => {
-  let authorizeToken
-  if (appid && token) {
-    authorizeToken = await authorizedLogin.getToken(String(appid), token)
-    if (authorizeToken)
-      window.location.href = `${redirect_uri}?token=${authorizeToken}`
-    else
-      window.$message.error('获取不到授权码')
+const authorize = () => {
+  if (app_id && token) {
+    new Promise((resolve, reject) => {
+      const authorizeToken = authorizedLogin.getToken(String(app_id), token)
+      resolve(authorizeToken)
+    }).then(
+      (authorizeToken) => {
+        if (authorizeToken)
+          window.location.href = `${redirect_uri}?token=${authorizeToken}`
+        else
+          window.$message.error('获取不到授权码')
+      },
+    )
   }
   else { window.$message.error('没有参数') }
 }
@@ -49,14 +54,14 @@ const cantDo = [
     <p text-2xl font-700 mb-2>
       授权登录
     </p>
-    <div v-if="appInfo.status === 'loading'">
+    <div v-if="appInfo.status === null">
       <div h-20 rounded-4 bg-gray-2 animate-pulse mb-4 />
       <div h-6 rounded-2 bg-gray-2 animate-pulse mb-2 />
       <div h-6 rounded-2 bg-gray-2 animate-pulse />
     </div>
-    <div v-else-if="appInfo.status === 'success'">
-      <p>以<span color-logo>{{ loginStatus.name }}</span>身份授权登录到：</p>
-      <div bg-hex-0000000f rounded-4 pa-2 flex items-center mb-4>
+    <div v-else-if="appInfo.status">
+      <p>以 <span color-logo>{{ loginStatus.username }}</span> 身份授权登录到：</p>
+      <div bg-darker rounded-4 pa-2 flex items-center mb-4>
         <img :src="appInfo.app_avatar" alt="Avatar" w-16 h-16 rounded-2 mr-4>
         <p>{{ appInfo.app_name }}</p>
       </div>

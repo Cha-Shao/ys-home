@@ -2,7 +2,13 @@ import axios from 'axios'
 import type { Ref } from 'vue'
 import { ref } from 'vue'
 
-export const loginStatus: Ref<any> = ref({ msg: '登录中', username: null, status: null })
+interface LoginStatus {
+  msg: string
+  username: string | null
+  status: boolean | null
+}
+
+export const loginStatus: Ref<LoginStatus> = ref({ msg: '登录中', username: null, status: null })
 
 const checkLogin = () => {
   const token = localStorage.getItem('token')

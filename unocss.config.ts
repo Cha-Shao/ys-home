@@ -1,9 +1,9 @@
 import {
   defineConfig,
+  presetAttributify,
   presetIcons,
   presetUno,
-  presetAttributify,
-  presetWind
+  presetWind,
 } from 'unocss'
 
 export default defineConfig({
@@ -17,7 +17,7 @@ export default defineConfig({
     presetUno(),
     presetIcons({
       scale: 1.2,
-      warn: true
+      warn: true,
     }),
     presetAttributify(),
     presetWind({
@@ -33,6 +33,7 @@ export default defineConfig({
       logo: '#FF8729',
       bg: '#fafafd',
       pbg: '#f0f0f6',
-    }
-  }
+      darker: '#5a5a800f',
+    },
+  },
 })

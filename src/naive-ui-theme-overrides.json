@@ -9,7 +9,7 @@
   },
   "Input": {
     "borderRadius": "7px",
-    "color": "#0000000F",
+    "color": "#5a5a800f",
     "colorFocus": "rgba(255, 255, 255, 0)",
     "borderHover": "1px solid transparent",
     "borderFocus": "1px solid #0000000f",

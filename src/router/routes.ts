@@ -20,5 +20,8 @@ export default [{
   }, {
     path: 'authorized_login',
     component: () => import('../components/SSO/authorizedLogin.vue'),
+  }, {
+    path: 'authorizes',
+    component: () => import('../components/SSO/authorizes.vue'),
   }],
 }]

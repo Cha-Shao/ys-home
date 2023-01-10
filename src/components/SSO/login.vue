@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NCheckbox, NInput } from 'naive-ui'
+import { NInput } from 'naive-ui'
 import type { Ref } from 'vue'
 import { ref } from 'vue'
 
@@ -19,9 +19,9 @@ const inputPassword: Ref<string> = ref('')
       <p text-coolgray>
         |
       </p>
-      <a href="/sso/register" text-coolgray>
-        注册
-      </a>
+      <RouterLink to="/">
+        首页
+      </RouterLink>
     </div>
     <div class="w-full flex gap-x-4 items-center">
       <span class="shrink-0">账号</span>

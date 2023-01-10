@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { h } from 'vue'
 import { NDropdown, useMessage } from 'naive-ui'
+import { useRouter } from 'vue-router'
 import { loginStatus } from '../../api/checkLogin'
 import YButton from './YButton.vue'
 
@@ -26,12 +27,17 @@ const renderIcon = (icon: string) => {
 }
 
 const dropDownOptions = [{
+  label: '管理授权登录',
+  key: '/sso/authorizes',
+  icon: renderIcon('i-ri:user-3-line'),
+}, {
   label: '退出登录',
   key: '/logout',
   icon: renderIcon('i-ri:logout-box-r-line'),
 }]
 
 const message = useMessage()
+const router = useRouter()
 const handleSelect = (key: string) => {
   if (key === '/logout') {
     localStorage.removeItem('token')
@@ -40,6 +46,9 @@ const handleSelect = (key: string) => {
     setTimeout(() => {
       window.location.reload()
     }, 1000)
+  }
+  else {
+    router.push(key)
   }
 }
 </script>
