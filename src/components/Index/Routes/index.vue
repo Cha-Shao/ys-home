@@ -10,15 +10,19 @@ import RoutesCard from './RoutesCard.vue'
 const routes = [{
   title: '浏览模型',
   icon: modelIcon,
+  link: 'https://art.mmixel.com/classify/model',
 }, {
   title: '浏览纹理',
   icon: textureIcon,
+  link: 'https://art.mmixel.com/classify/texture',
 }, {
   title: '前往厕所',
   icon: toiletIcon,
+  link: 'https://art.mmixel.com/',
 }, {
   title: '浏览地图',
   icon: mapIcon,
+  link: 'https://art.mmixel.com/classify/map',
 }]
 </script>
 
@@ -31,6 +35,7 @@ const routes = [{
       col-span-3
       :title="data.title"
       :icon="data.icon"
+      :link="data.link"
     />
     <div
       rounded-4

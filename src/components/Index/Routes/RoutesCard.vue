@@ -4,6 +4,7 @@ import { ref } from 'vue'
 const props = defineProps<{
   title: string
   icon: string
+  link: string
 }>()
 
 const frame = ref(0)
@@ -18,7 +19,7 @@ const iconAnimation = (to: number, key: string) => {
 </script>
 
 <template>
-  <a href="#" target="_blank">
+  <a :href="props.link" target="_blank">
     <div
       h-full cursor-pointer rounded-4 bg-bg shadow-md flex flex-col justify-center items-center
       @mouseenter="iconAnimation(-1, 'model')" @mouseleave="iconAnimation(1, 'model')"

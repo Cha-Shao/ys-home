@@ -7,8 +7,8 @@ import YButton from './YButton.vue'
 
 const links = [
   {
-    label: '商店',
-    link: 'https://store.elfmc.com/',
+    label: '资源站',
+    link: 'https://art.mmixel.com',
   },
   {
     label: 'Bilibili',
@@ -16,7 +16,7 @@ const links = [
   },
   {
     label: '联系我们',
-    link: 'https://store.elfmc.com/contact',
+    link: 'https://art.mmixel.com/contact',
   },
 ]
 
@@ -25,16 +25,6 @@ const renderIcon = (icon: string) => {
     return h('div', { class: icon })
   }
 }
-
-const dropDownOptions = [{
-  label: '管理授权登录',
-  key: '/sso/authorizes',
-  icon: renderIcon('i-ri:user-3-line'),
-}, {
-  label: '退出登录',
-  key: '/logout',
-  icon: renderIcon('i-ri:logout-box-r-line'),
-}]
 
 const message = useMessage()
 const router = useRouter()
@@ -63,21 +53,6 @@ const handleSelect = (key: string) => {
     </div>
     <div flex items-center>
       <a v-for="(data, i) in links" :key="i" :href="data.link" target="_blank" hover:color-logo transition-200 font-500 px-4>{{ data.label }}</a>
-      <div h-6 w-1px bg-hex-00000018 mx-4 />
-
-      <div v-if="loginStatus.status === null" h-6 w-6 flex>
-        <div m-auto class="loading" i-ri:loader-5-line />
-      </div>
-      <p v-else-if="loginStatus.status === true">
-        <NDropdown trigger="hover" :options="dropDownOptions" @select="handleSelect">
-          {{ loginStatus.username }}
-        </NDropdown>
-      </p>
-      <a v-else href="/sso/login">
-        <YButton primary mx-4>
-          登录
-        </YButton>
-      </a>
     </div>
   </div>
 </template>
