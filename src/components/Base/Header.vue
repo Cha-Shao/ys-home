@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { h } from 'vue'
-import { NDropdown, useMessage } from 'naive-ui'
+import { useMessage } from 'naive-ui'
 import { useRouter } from 'vue-router'
-import { loginStatus } from '../../api/checkLogin'
-import YButton from './YButton.vue'
 
 const links = [
   {
